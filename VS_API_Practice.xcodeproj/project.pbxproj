@@ -1,0 +1,821 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		040878D31C4553E20043CD83 /* VSVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 040878D21C4553E20043CD83 /* VSVideo.m */; };
+		040C90771C2452EA0019FA35 /* VSMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C90761C2452EA0019FA35 /* VSMessageVC.m */; };
+		04115B651BE7E399006400FC /* heart_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04115B641BE7E399006400FC /* heart_icon.png */; };
+		043DA3FE1C2EA36700734876 /* VSDialogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DA3FD1C2EA36700734876 /* VSDialogCell.m */; };
+		0448C6821BCEB98200715E01 /* VSAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448C6811BCEB98200715E01 /* VSAccessToken.m */; };
+		0448C6861BCEC03C00715E01 /* VSServerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448C6851BCEC03C00715E01 /* VSServerObject.m */; };
+		0448C68C1BCEC4E400715E01 /* VSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448C68B1BCEC4E400715E01 /* VSUser.m */; };
+		0448C68F1BCEC5EF00715E01 /* VSPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448C68E1BCEC5EF00715E01 /* VSPost.m */; };
+		0448C6921BCEC69F00715E01 /* VSServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448C6911BCEC69F00715E01 /* VSServerManager.m */; };
+		0448C6961BCECA3A00715E01 /* VSUserPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448C6951BCECA3A00715E01 /* VSUserPageVC.m */; };
+		0448C6A01BCECCF800715E01 /* VSPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448C69F1BCECCF800715E01 /* VSPostCell.m */; };
+		0448C6A71BCECF6700715E01 /* VSLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448C6A61BCECF6700715E01 /* VSLoginVC.m */; };
+		047C494E1C32E1FF002F682C /* VSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 047C494D1C32E1FF002F682C /* VSMessage.m */; };
+		0480BA6E1BFB7419006D857F /* VSGroupPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0480BA6D1BFB7419006D857F /* VSGroupPageVC.m */; };
+		0480BA711BFB78F8006D857F /* VSGroupInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0480BA701BFB78F8006D857F /* VSGroupInfoCell.m */; };
+		04974B4B1BCFE8B300396970 /* VSUserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04974B4A1BCFE8B300396970 /* VSUserInfoCell.m */; };
+		04974F7F1BD9270800EE1AF3 /* VSFriendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04974F7E1BD9270800EE1AF3 /* VSFriendVC.m */; };
+		049B65FD1BE11AA600B1C086 /* VSPhotoAlbumsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B65FC1BE11AA600B1C086 /* VSPhotoAlbumsCell.m */; };
+		049B66001BE132F700B1C086 /* VSUserPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 049B65FF1BE132F700B1C086 /* VSUserPhotoAlbum.m */; };
+		049D92C51BE763D300317FF2 /* VSGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 049D92C41BE763D300317FF2 /* VSGroup.m */; };
+		04A0C4DA1C04C43E006895BF /* VSWallMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A0C4D91C04C43E006895BF /* VSWallMessageCell.m */; };
+		04ADA0B01C3C0E35008FAA8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04ADA0AE1C3C0E35008FAA8F /* Main.storyboard */; };
+		04BF03101BD7B978003D447D /* detailUserBg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04BF030F1BD7B978003D447D /* detailUserBg.jpg */; };
+		04BF03151BD7CD46003D447D /* VSUserConnectionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF03141BD7CD46003D447D /* VSUserConnectionsCell.m */; };
+		04BF03171BD7EB7E003D447D /* cell_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BF03161BD7EB7E003D447D /* cell_back.png */; };
+		04C1B2451BCEAB00002909CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1B2441BCEAB00002909CE /* main.m */; };
+		04C1B2481BCEAB00002909CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1B2471BCEAB00002909CE /* AppDelegate.m */; };
+		04C1B24E1BCEAB00002909CE /* Main3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C1B24C1BCEAB00002909CE /* Main3.storyboard */; };
+		04C1B2501BCEAB00002909CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C1B24F1BCEAB00002909CE /* Assets.xcassets */; };
+		04C1B2531BCEAB00002909CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C1B2511BCEAB00002909CE /* LaunchScreen.storyboard */; };
+		04C1B25E1BCEAB01002909CE /* VS_API_PracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1B25D1BCEAB01002909CE /* VS_API_PracticeTests.m */; };
+		04C1B2691BCEAB01002909CE /* VS_API_PracticeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1B2681BCEAB01002909CE /* VS_API_PracticeUITests.m */; };
+		04C6C9C31BE3B8680015876E /* VSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C6C9C21BE3B8680015876E /* VSCollectionViewCell.m */; };
+		04DF46E41C0F083500861022 /* Start.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DF46E31C0F083500861022 /* Start.png */; };
+		04F10D4C1BF9EE5500F75079 /* VSPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F10D4B1BF9EE5500F75079 /* VSPhoto.m */; };
+		04F7512E1C0B91180007F3B7 /* VSSearchBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F7512D1C0B91180007F3B7 /* VSSearchBarCell.m */; };
+		6CAC2652A505317904DABBD4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B55149BBE94D36EBB09A5F /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04C1B25A1BCEAB01002909CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04C1B2381BCEAB00002909CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04C1B23F1BCEAB00002909CE;
+			remoteInfo = VS_API_Practice;
+		};
+		04C1B2651BCEAB01002909CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04C1B2381BCEAB00002909CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04C1B23F1BCEAB00002909CE;
+			remoteInfo = VS_API_Practice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		040878D11C4553E20043CD83 /* VSVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSVideo.h; sourceTree = "<group>"; };
+		040878D21C4553E20043CD83 /* VSVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSVideo.m; sourceTree = "<group>"; };
+		040C90751C2452EA0019FA35 /* VSMessageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSMessageVC.h; sourceTree = "<group>"; };
+		040C90761C2452EA0019FA35 /* VSMessageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSMessageVC.m; sourceTree = "<group>"; };
+		04115B641BE7E399006400FC /* heart_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_icon.png; sourceTree = "<group>"; };
+		043DA3FC1C2EA36700734876 /* VSDialogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSDialogCell.h; sourceTree = "<group>"; };
+		043DA3FD1C2EA36700734876 /* VSDialogCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSDialogCell.m; sourceTree = "<group>"; };
+		0448C6801BCEB98200715E01 /* VSAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSAccessToken.h; sourceTree = "<group>"; };
+		0448C6811BCEB98200715E01 /* VSAccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSAccessToken.m; sourceTree = "<group>"; };
+		0448C6841BCEC03C00715E01 /* VSServerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSServerObject.h; sourceTree = "<group>"; };
+		0448C6851BCEC03C00715E01 /* VSServerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSServerObject.m; sourceTree = "<group>"; };
+		0448C6871BCEC43E00715E01 /* VSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSUser.h; sourceTree = "<group>"; };
+		0448C68B1BCEC4E400715E01 /* VSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSUser.m; sourceTree = "<group>"; };
+		0448C68D1BCEC5EF00715E01 /* VSPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSPost.h; sourceTree = "<group>"; };
+		0448C68E1BCEC5EF00715E01 /* VSPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSPost.m; sourceTree = "<group>"; };
+		0448C6901BCEC69F00715E01 /* VSServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSServerManager.h; sourceTree = "<group>"; };
+		0448C6911BCEC69F00715E01 /* VSServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSServerManager.m; sourceTree = "<group>"; };
+		0448C6941BCECA3A00715E01 /* VSUserPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSUserPageVC.h; sourceTree = "<group>"; };
+		0448C6951BCECA3A00715E01 /* VSUserPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSUserPageVC.m; sourceTree = "<group>"; };
+		0448C69E1BCECCF800715E01 /* VSPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSPostCell.h; sourceTree = "<group>"; };
+		0448C69F1BCECCF800715E01 /* VSPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSPostCell.m; sourceTree = "<group>"; };
+		0448C6A51BCECF6700715E01 /* VSLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSLoginVC.h; sourceTree = "<group>"; };
+		0448C6A61BCECF6700715E01 /* VSLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSLoginVC.m; sourceTree = "<group>"; };
+		047C494C1C32E1FF002F682C /* VSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSMessage.h; sourceTree = "<group>"; };
+		047C494D1C32E1FF002F682C /* VSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSMessage.m; sourceTree = "<group>"; };
+		0480BA6C1BFB7419006D857F /* VSGroupPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSGroupPageVC.h; sourceTree = "<group>"; };
+		0480BA6D1BFB7419006D857F /* VSGroupPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSGroupPageVC.m; sourceTree = "<group>"; };
+		0480BA6F1BFB78F8006D857F /* VSGroupInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSGroupInfoCell.h; sourceTree = "<group>"; };
+		0480BA701BFB78F8006D857F /* VSGroupInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSGroupInfoCell.m; sourceTree = "<group>"; };
+		04974B491BCFE8B300396970 /* VSUserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSUserInfoCell.h; sourceTree = "<group>"; };
+		04974B4A1BCFE8B300396970 /* VSUserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSUserInfoCell.m; sourceTree = "<group>"; };
+		04974F7D1BD9270800EE1AF3 /* VSFriendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSFriendVC.h; sourceTree = "<group>"; };
+		04974F7E1BD9270800EE1AF3 /* VSFriendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSFriendVC.m; sourceTree = "<group>"; };
+		049B65FB1BE11AA600B1C086 /* VSPhotoAlbumsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSPhotoAlbumsCell.h; sourceTree = "<group>"; };
+		049B65FC1BE11AA600B1C086 /* VSPhotoAlbumsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSPhotoAlbumsCell.m; sourceTree = "<group>"; };
+		049B65FE1BE132F700B1C086 /* VSUserPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSUserPhotoAlbum.h; sourceTree = "<group>"; };
+		049B65FF1BE132F700B1C086 /* VSUserPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSUserPhotoAlbum.m; sourceTree = "<group>"; };
+		049D92C31BE763D300317FF2 /* VSGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSGroup.h; sourceTree = "<group>"; };
+		049D92C41BE763D300317FF2 /* VSGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSGroup.m; sourceTree = "<group>"; };
+		04A0C4D81C04C43E006895BF /* VSWallMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSWallMessageCell.h; sourceTree = "<group>"; };
+		04A0C4D91C04C43E006895BF /* VSWallMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSWallMessageCell.m; sourceTree = "<group>"; };
+		04ADA0AF1C3C0E35008FAA8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04BDA0FB1C10484D001F93F3 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
+		04BF030F1BD7B978003D447D /* detailUserBg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = detailUserBg.jpg; sourceTree = "<group>"; };
+		04BF03131BD7CD46003D447D /* VSUserConnectionsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSUserConnectionsCell.h; sourceTree = "<group>"; };
+		04BF03141BD7CD46003D447D /* VSUserConnectionsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSUserConnectionsCell.m; sourceTree = "<group>"; };
+		04BF03161BD7EB7E003D447D /* cell_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_back.png; sourceTree = "<group>"; };
+		04C1B2401BCEAB00002909CE /* VS_API_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VS_API_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C1B2441BCEAB00002909CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04C1B2461BCEAB00002909CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04C1B2471BCEAB00002909CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04C1B24D1BCEAB00002909CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main3.storyboard; sourceTree = "<group>"; };
+		04C1B24F1BCEAB00002909CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04C1B2521BCEAB00002909CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04C1B2541BCEAB00002909CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C1B2591BCEAB01002909CE /* VS_API_PracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VS_API_PracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C1B25D1BCEAB01002909CE /* VS_API_PracticeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VS_API_PracticeTests.m; sourceTree = "<group>"; };
+		04C1B25F1BCEAB01002909CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C1B2641BCEAB01002909CE /* VS_API_PracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VS_API_PracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C1B2681BCEAB01002909CE /* VS_API_PracticeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VS_API_PracticeUITests.m; sourceTree = "<group>"; };
+		04C1B26A1BCEAB01002909CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C6C9C11BE3B8680015876E /* VSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSCollectionViewCell.h; sourceTree = "<group>"; };
+		04C6C9C21BE3B8680015876E /* VSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSCollectionViewCell.m; sourceTree = "<group>"; };
+		04DF46E31C0F083500861022 /* Start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Start.png; sourceTree = "<group>"; };
+		04F10D4A1BF9EE5500F75079 /* VSPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSPhoto.h; sourceTree = "<group>"; };
+		04F10D4B1BF9EE5500F75079 /* VSPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSPhoto.m; sourceTree = "<group>"; };
+		04F7512C1C0B91170007F3B7 /* VSSearchBarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSSearchBarCell.h; sourceTree = "<group>"; };
+		04F7512D1C0B91180007F3B7 /* VSSearchBarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSSearchBarCell.m; sourceTree = "<group>"; };
+		15B55149BBE94D36EBB09A5F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		324C3E14C5756AE1654EABC8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		AFDA8C475144EB3224B8353C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04C1B23D1BCEAB00002909CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CAC2652A505317904DABBD4 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C1B2561BCEAB01002909CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C1B2611BCEAB01002909CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0448C6831BCEB9FD00715E01 /* Supporting classes */ = {
+			isa = PBXGroup;
+			children = (
+				0448C6801BCEB98200715E01 /* VSAccessToken.h */,
+				0448C6811BCEB98200715E01 /* VSAccessToken.m */,
+				0448C6841BCEC03C00715E01 /* VSServerObject.h */,
+				0448C6851BCEC03C00715E01 /* VSServerObject.m */,
+			);
+			name = "Supporting classes";
+			sourceTree = "<group>";
+		};
+		0448C68A1BCEC44900715E01 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0448C6871BCEC43E00715E01 /* VSUser.h */,
+				0448C68B1BCEC4E400715E01 /* VSUser.m */,
+				0448C68D1BCEC5EF00715E01 /* VSPost.h */,
+				0448C68E1BCEC5EF00715E01 /* VSPost.m */,
+				049D92C31BE763D300317FF2 /* VSGroup.h */,
+				049D92C41BE763D300317FF2 /* VSGroup.m */,
+				049B65FE1BE132F700B1C086 /* VSUserPhotoAlbum.h */,
+				049B65FF1BE132F700B1C086 /* VSUserPhotoAlbum.m */,
+				04F10D4A1BF9EE5500F75079 /* VSPhoto.h */,
+				04F10D4B1BF9EE5500F75079 /* VSPhoto.m */,
+				047C494C1C32E1FF002F682C /* VSMessage.h */,
+				047C494D1C32E1FF002F682C /* VSMessage.m */,
+				040878D11C4553E20043CD83 /* VSVideo.h */,
+				040878D21C4553E20043CD83 /* VSVideo.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0448C6931BCEC6AA00715E01 /* Singletones */ = {
+			isa = PBXGroup;
+			children = (
+				0448C6901BCEC69F00715E01 /* VSServerManager.h */,
+				0448C6911BCEC69F00715E01 /* VSServerManager.m */,
+			);
+			name = Singletones;
+			sourceTree = "<group>";
+		};
+		0448C6971BCECA4500715E01 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0448C6941BCECA3A00715E01 /* VSUserPageVC.h */,
+				0448C6951BCECA3A00715E01 /* VSUserPageVC.m */,
+				0480BA6C1BFB7419006D857F /* VSGroupPageVC.h */,
+				0480BA6D1BFB7419006D857F /* VSGroupPageVC.m */,
+				04974F7D1BD9270800EE1AF3 /* VSFriendVC.h */,
+				04974F7E1BD9270800EE1AF3 /* VSFriendVC.m */,
+				0448C6A51BCECF6700715E01 /* VSLoginVC.h */,
+				0448C6A61BCECF6700715E01 /* VSLoginVC.m */,
+				040C90751C2452EA0019FA35 /* VSMessageVC.h */,
+				040C90761C2452EA0019FA35 /* VSMessageVC.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0448C6A11BCECD1B00715E01 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0448C69E1BCECCF800715E01 /* VSPostCell.h */,
+				0448C69F1BCECCF800715E01 /* VSPostCell.m */,
+				04974B491BCFE8B300396970 /* VSUserInfoCell.h */,
+				04974B4A1BCFE8B300396970 /* VSUserInfoCell.m */,
+				0480BA6F1BFB78F8006D857F /* VSGroupInfoCell.h */,
+				0480BA701BFB78F8006D857F /* VSGroupInfoCell.m */,
+				04BF03131BD7CD46003D447D /* VSUserConnectionsCell.h */,
+				04BF03141BD7CD46003D447D /* VSUserConnectionsCell.m */,
+				049B65FB1BE11AA600B1C086 /* VSPhotoAlbumsCell.h */,
+				049B65FC1BE11AA600B1C086 /* VSPhotoAlbumsCell.m */,
+				04C6C9C11BE3B8680015876E /* VSCollectionViewCell.h */,
+				04C6C9C21BE3B8680015876E /* VSCollectionViewCell.m */,
+				04A0C4D81C04C43E006895BF /* VSWallMessageCell.h */,
+				04A0C4D91C04C43E006895BF /* VSWallMessageCell.m */,
+				04F7512C1C0B91170007F3B7 /* VSSearchBarCell.h */,
+				04F7512D1C0B91180007F3B7 /* VSSearchBarCell.m */,
+				043DA3FC1C2EA36700734876 /* VSDialogCell.h */,
+				043DA3FD1C2EA36700734876 /* VSDialogCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		04BF03111BD7B97E003D447D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				04BF03161BD7EB7E003D447D /* cell_back.png */,
+				04DF46E31C0F083500861022 /* Start.png */,
+				04BF030F1BD7B978003D447D /* detailUserBg.jpg */,
+				04115B641BE7E399006400FC /* heart_icon.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		04C1B2371BCEAB00002909CE = {
+			isa = PBXGroup;
+			children = (
+				04C1B2421BCEAB00002909CE /* VS_API_Practice */,
+				04C1B25C1BCEAB01002909CE /* VS_API_PracticeTests */,
+				04C1B2671BCEAB01002909CE /* VS_API_PracticeUITests */,
+				04C1B2411BCEAB00002909CE /* Products */,
+				8F15886CEA8AC7037D49FBC3 /* Pods */,
+				A9E374879BF5EDA3E5718B15 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04C1B2411BCEAB00002909CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04C1B2401BCEAB00002909CE /* VS_API_Practice.app */,
+				04C1B2591BCEAB01002909CE /* VS_API_PracticeTests.xctest */,
+				04C1B2641BCEAB01002909CE /* VS_API_PracticeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04C1B2421BCEAB00002909CE /* VS_API_Practice */ = {
+			isa = PBXGroup;
+			children = (
+				04ADA0AE1C3C0E35008FAA8F /* Main.storyboard */,
+				0448C6931BCEC6AA00715E01 /* Singletones */,
+				0448C6971BCECA4500715E01 /* ViewControllers */,
+				0448C6A11BCECD1B00715E01 /* Cells */,
+				0448C68A1BCEC44900715E01 /* Models */,
+				0448C6831BCEB9FD00715E01 /* Supporting classes */,
+				04BF03111BD7B97E003D447D /* Images */,
+				04C1B2431BCEAB00002909CE /* Supporting Files */,
+			);
+			path = VS_API_Practice;
+			sourceTree = "<group>";
+		};
+		04C1B2431BCEAB00002909CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04C1B24C1BCEAB00002909CE /* Main3.storyboard */,
+				04C1B24F1BCEAB00002909CE /* Assets.xcassets */,
+				04C1B2511BCEAB00002909CE /* LaunchScreen.storyboard */,
+				04C1B2461BCEAB00002909CE /* AppDelegate.h */,
+				04C1B2471BCEAB00002909CE /* AppDelegate.m */,
+				04C1B2541BCEAB00002909CE /* Info.plist */,
+				04C1B2441BCEAB00002909CE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04C1B25C1BCEAB01002909CE /* VS_API_PracticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				04C1B25D1BCEAB01002909CE /* VS_API_PracticeTests.m */,
+				04C1B25F1BCEAB01002909CE /* Info.plist */,
+			);
+			path = VS_API_PracticeTests;
+			sourceTree = "<group>";
+		};
+		04C1B2671BCEAB01002909CE /* VS_API_PracticeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04C1B2681BCEAB01002909CE /* VS_API_PracticeUITests.m */,
+				04C1B26A1BCEAB01002909CE /* Info.plist */,
+			);
+			path = VS_API_PracticeUITests;
+			sourceTree = "<group>";
+		};
+		8F15886CEA8AC7037D49FBC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFDA8C475144EB3224B8353C /* Pods.debug.xcconfig */,
+				324C3E14C5756AE1654EABC8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A9E374879BF5EDA3E5718B15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04BDA0FB1C10484D001F93F3 /* libAFNetworking.a */,
+				15B55149BBE94D36EBB09A5F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04C1B23F1BCEAB00002909CE /* VS_API_Practice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04C1B26D1BCEAB01002909CE /* Build configuration list for PBXNativeTarget "VS_API_Practice" */;
+			buildPhases = (
+				B117A7871C469CB5AC398CD6 /* Check Pods Manifest.lock */,
+				04C1B23C1BCEAB00002909CE /* Sources */,
+				04C1B23D1BCEAB00002909CE /* Frameworks */,
+				04C1B23E1BCEAB00002909CE /* Resources */,
+				39DDB547C08B8D82ACF608AF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VS_API_Practice;
+			productName = VS_API_Practice;
+			productReference = 04C1B2401BCEAB00002909CE /* VS_API_Practice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04C1B2581BCEAB01002909CE /* VS_API_PracticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04C1B2701BCEAB01002909CE /* Build configuration list for PBXNativeTarget "VS_API_PracticeTests" */;
+			buildPhases = (
+				04C1B2551BCEAB01002909CE /* Sources */,
+				04C1B2561BCEAB01002909CE /* Frameworks */,
+				04C1B2571BCEAB01002909CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04C1B25B1BCEAB01002909CE /* PBXTargetDependency */,
+			);
+			name = VS_API_PracticeTests;
+			productName = VS_API_PracticeTests;
+			productReference = 04C1B2591BCEAB01002909CE /* VS_API_PracticeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04C1B2631BCEAB01002909CE /* VS_API_PracticeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04C1B2731BCEAB01002909CE /* Build configuration list for PBXNativeTarget "VS_API_PracticeUITests" */;
+			buildPhases = (
+				04C1B2601BCEAB01002909CE /* Sources */,
+				04C1B2611BCEAB01002909CE /* Frameworks */,
+				04C1B2621BCEAB01002909CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04C1B2661BCEAB01002909CE /* PBXTargetDependency */,
+			);
+			name = VS_API_PracticeUITests;
+			productName = VS_API_PracticeUITests;
+			productReference = 04C1B2641BCEAB01002909CE /* VS_API_PracticeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04C1B2381BCEAB00002909CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VS;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = VascheeeDevelopment;
+				TargetAttributes = {
+					04C1B23F1BCEAB00002909CE = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = TKVGWF4U27;
+					};
+					04C1B2581BCEAB01002909CE = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = TKVGWF4U27;
+						TestTargetID = 04C1B23F1BCEAB00002909CE;
+					};
+					04C1B2631BCEAB01002909CE = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = TKVGWF4U27;
+						TestTargetID = 04C1B23F1BCEAB00002909CE;
+					};
+				};
+			};
+			buildConfigurationList = 04C1B23B1BCEAB00002909CE /* Build configuration list for PBXProject "VS_API_Practice" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04C1B2371BCEAB00002909CE;
+			productRefGroup = 04C1B2411BCEAB00002909CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04C1B23F1BCEAB00002909CE /* VS_API_Practice */,
+				04C1B2581BCEAB01002909CE /* VS_API_PracticeTests */,
+				04C1B2631BCEAB01002909CE /* VS_API_PracticeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04C1B23E1BCEAB00002909CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C1B2531BCEAB00002909CE /* LaunchScreen.storyboard in Resources */,
+				04C1B2501BCEAB00002909CE /* Assets.xcassets in Resources */,
+				04DF46E41C0F083500861022 /* Start.png in Resources */,
+				04BF03101BD7B978003D447D /* detailUserBg.jpg in Resources */,
+				04115B651BE7E399006400FC /* heart_icon.png in Resources */,
+				04BF03171BD7EB7E003D447D /* cell_back.png in Resources */,
+				04ADA0B01C3C0E35008FAA8F /* Main.storyboard in Resources */,
+				04C1B24E1BCEAB00002909CE /* Main3.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C1B2571BCEAB01002909CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C1B2621BCEAB01002909CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39DDB547C08B8D82ACF608AF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B117A7871C469CB5AC398CD6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04C1B23C1BCEAB00002909CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0448C68C1BCEC4E400715E01 /* VSUser.m in Sources */,
+				04974F7F1BD9270800EE1AF3 /* VSFriendVC.m in Sources */,
+				0480BA6E1BFB7419006D857F /* VSGroupPageVC.m in Sources */,
+				04A0C4DA1C04C43E006895BF /* VSWallMessageCell.m in Sources */,
+				040C90771C2452EA0019FA35 /* VSMessageVC.m in Sources */,
+				04C1B2481BCEAB00002909CE /* AppDelegate.m in Sources */,
+				0448C6A71BCECF6700715E01 /* VSLoginVC.m in Sources */,
+				049D92C51BE763D300317FF2 /* VSGroup.m in Sources */,
+				0448C6821BCEB98200715E01 /* VSAccessToken.m in Sources */,
+				0480BA711BFB78F8006D857F /* VSGroupInfoCell.m in Sources */,
+				04F10D4C1BF9EE5500F75079 /* VSPhoto.m in Sources */,
+				049B66001BE132F700B1C086 /* VSUserPhotoAlbum.m in Sources */,
+				047C494E1C32E1FF002F682C /* VSMessage.m in Sources */,
+				04974B4B1BCFE8B300396970 /* VSUserInfoCell.m in Sources */,
+				0448C68F1BCEC5EF00715E01 /* VSPost.m in Sources */,
+				040878D31C4553E20043CD83 /* VSVideo.m in Sources */,
+				04C1B2451BCEAB00002909CE /* main.m in Sources */,
+				04BF03151BD7CD46003D447D /* VSUserConnectionsCell.m in Sources */,
+				04F7512E1C0B91180007F3B7 /* VSSearchBarCell.m in Sources */,
+				043DA3FE1C2EA36700734876 /* VSDialogCell.m in Sources */,
+				0448C6861BCEC03C00715E01 /* VSServerObject.m in Sources */,
+				04C6C9C31BE3B8680015876E /* VSCollectionViewCell.m in Sources */,
+				0448C6921BCEC69F00715E01 /* VSServerManager.m in Sources */,
+				0448C6A01BCECCF800715E01 /* VSPostCell.m in Sources */,
+				0448C6961BCECA3A00715E01 /* VSUserPageVC.m in Sources */,
+				049B65FD1BE11AA600B1C086 /* VSPhotoAlbumsCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C1B2551BCEAB01002909CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C1B25E1BCEAB01002909CE /* VS_API_PracticeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C1B2601BCEAB01002909CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C1B2691BCEAB01002909CE /* VS_API_PracticeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04C1B25B1BCEAB01002909CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04C1B23F1BCEAB00002909CE /* VS_API_Practice */;
+			targetProxy = 04C1B25A1BCEAB01002909CE /* PBXContainerItemProxy */;
+		};
+		04C1B2661BCEAB01002909CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04C1B23F1BCEAB00002909CE /* VS_API_Practice */;
+			targetProxy = 04C1B2651BCEAB01002909CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04ADA0AE1C3C0E35008FAA8F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04ADA0AF1C3C0E35008FAA8F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04C1B24C1BCEAB00002909CE /* Main3.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04C1B24D1BCEAB00002909CE /* Base */,
+			);
+			name = Main3.storyboard;
+			sourceTree = "<group>";
+		};
+		04C1B2511BCEAB00002909CE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04C1B2521BCEAB00002909CE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04C1B26B1BCEAB01002909CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04C1B26C1BCEAB01002909CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04C1B26E1BCEAB01002909CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFDA8C475144EB3224B8353C /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = VS_API_Practice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "VS.VS-API-Practice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		04C1B26F1BCEAB01002909CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 324C3E14C5756AE1654EABC8 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = VS_API_Practice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "VS.VS-API-Practice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		04C1B2711BCEAB01002909CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VS_API_PracticeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "VS.VS-API-PracticeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VS_API_Practice.app/VS_API_Practice";
+			};
+			name = Debug;
+		};
+		04C1B2721BCEAB01002909CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VS_API_PracticeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "VS.VS-API-PracticeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VS_API_Practice.app/VS_API_Practice";
+			};
+			name = Release;
+		};
+		04C1B2741BCEAB01002909CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VS_API_PracticeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "VS.VS-API-PracticeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VS_API_Practice;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		04C1B2751BCEAB01002909CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VS_API_PracticeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "VS.VS-API-PracticeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VS_API_Practice;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04C1B23B1BCEAB00002909CE /* Build configuration list for PBXProject "VS_API_Practice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C1B26B1BCEAB01002909CE /* Debug */,
+				04C1B26C1BCEAB01002909CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04C1B26D1BCEAB01002909CE /* Build configuration list for PBXNativeTarget "VS_API_Practice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C1B26E1BCEAB01002909CE /* Debug */,
+				04C1B26F1BCEAB01002909CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04C1B2701BCEAB01002909CE /* Build configuration list for PBXNativeTarget "VS_API_PracticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C1B2711BCEAB01002909CE /* Debug */,
+				04C1B2721BCEAB01002909CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04C1B2731BCEAB01002909CE /* Build configuration list for PBXNativeTarget "VS_API_PracticeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C1B2741BCEAB01002909CE /* Debug */,
+				04C1B2751BCEAB01002909CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04C1B2381BCEAB00002909CE /* Project object */;
+}

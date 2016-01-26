@@ -1,0 +1,1541 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="nqV-7p-6VI">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--User PageVC-->
+        <scene sceneID="qWj-WA-vgP">
+            <objects>
+                <tableViewController storyboardIdentifier="VSUserPageVC" id="12A-Oh-UfJ" customClass="VSUserPageVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="W80-Y5-1iC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VSUserInfoCell" rowHeight="168" id="bAM-Bt-2gv" customClass="VSUserInfoCell">
+                                <rect key="frame" x="0.0" y="92" width="375" height="168"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bAM-Bt-2gv" id="4XR-cL-ZKP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailUserBg.jpg" id="80e-el-4qA">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="219"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="cC2-5k-7AI">
+                                            <rect key="frame" x="10" y="10" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.57701097707037263" green="0.74233382444972129" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ващенко Сергей" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" id="zd5-EM-eHk">
+                                            <rect key="frame" x="173" y="10" width="340" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rQW-nP-oZc">
+                                            <rect key="frame" x="168" y="128" width="199" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.7000835674677417" green="0.76920974597396663" blue="0.81970091540404044" alpha="0.63" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="18"/>
+                                            <state key="normal" title="Написать сообщение">
+                                                <color key="titleColor" red="0.13471567534374893" green="0.15119120047441725" blue="0.29330413510101006" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                    <color key="value" red="0.0024602481738930258" green="0.0067336325588609486" blue="0.011403093434343425" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <segue destination="JxF-Kx-YCG" kind="push" identifier="messageSegue" id="ZEM-9z-sHQ"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Одесса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WWd-dD-tEc">
+                                            <rect key="frame" x="173" y="33" width="324" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="16"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VvH-I6-TEs">
+                                            <rect key="frame" x="323" y="0.0" width="52" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="14"/>
+                                            <color key="textColor" red="0.14376183712121215" green="0.14376183712121215" blue="0.14376183712121215" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatar" destination="cC2-5k-7AI" id="JlN-gZ-iAE"/>
+                                    <outlet property="onlineIndicatorLabel" destination="VvH-I6-TEs" id="fqm-ci-V2c"/>
+                                    <outlet property="userCityLabel" destination="WWd-dD-tEc" id="Lco-W8-IHv"/>
+                                    <outlet property="userNameLabel" destination="zd5-EM-eHk" id="eKl-30-9eY"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VSWallMessageCell" rowHeight="95" id="HgA-bJ-cqy" customClass="VSWallMessageCell">
+                                <rect key="frame" x="0.0" y="260" width="375" height="95"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HgA-bJ-cqy" id="cTf-CZ-fnw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество записей стены:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xUD-jZ-4or">
+                                            <rect key="frame" x="10" y="8" width="300" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UIM-SX-7T8">
+                                            <rect key="frame" x="8" y="66" width="101" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Отправить">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="sendMessageAction:" destination="HgA-bJ-cqy" eventType="touchUpInside" id="zff-Tc-00Q"/>
+                                            </connections>
+                                        </button>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Написать сообщение" textAlignment="natural" minimumFontSize="17" id="YOA-1Z-gPt">
+                                            <rect key="frame" x="8" y="28" width="359" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="HgA-bJ-cqy" id="6WM-HM-AZ0"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.79186395202020199" green="0.79186395202020199" blue="0.79186395202020199" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="messageTextField" destination="YOA-1Z-gPt" id="rEb-Rt-xwm"/>
+                                    <outlet property="postsCountLabel" destination="xUD-jZ-4or" id="TDI-tN-bUh"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VSUserConnectionsCell" rowHeight="29" id="8UX-av-TK5" customClass="VSUserConnectionsCell">
+                                <rect key="frame" x="0.0" y="355" width="375" height="29"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8UX-av-TK5" id="hgi-cM-J5O">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="28"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="A2f-Iz-HKv">
+                                            <rect key="frame" x="97" y="2" width="90" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.36969511027832264" green="0.42630324383737372" blue="0.37744582888561995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Группы">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="getGroupsAction:" destination="8UX-av-TK5" eventType="touchUpInside" id="rhI-dv-aeY"/>
+                                                <segue destination="Wad-Fq-5E7" kind="push" identifier="showGroupsSegue" id="nwV-y9-nb9"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WZ1-Ue-Uad">
+                                            <rect key="frame" x="190" y="2" width="90" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.36969511027832264" green="0.42630324383737372" blue="0.37744582888561995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Подписки">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="getFollowersAction:" destination="8UX-av-TK5" eventType="touchUpInside" id="Kkp-XZ-bBS"/>
+                                                <action selector="getSubscriptionsAction:" destination="8UX-av-TK5" eventType="touchUpInside" id="4kL-tg-PNa"/>
+                                                <segue destination="Wad-Fq-5E7" kind="push" identifier="showFollowersSegue" id="5P6-Uv-mRl"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CEm-Kv-cQb">
+                                            <rect key="frame" x="4" y="2" width="90" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.36969511027832264" green="0.42630324383737372" blue="0.37744582888561995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Друзья">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="getFriendsAction:" destination="8UX-av-TK5" eventType="touchUpInside" id="QaV-kP-F6J"/>
+                                                <segue destination="Wad-Fq-5E7" kind="push" identifier="showFriendsSegue" id="4GS-uC-XOK"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UCR-4M-PvD">
+                                            <rect key="frame" x="282" y="2" width="90" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.36969511027832264" green="0.42630324383737372" blue="0.37744582888561995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Подписчики">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="getFollowersAction:" destination="8UX-av-TK5" eventType="touchUpInside" id="h9O-GS-U9S"/>
+                                                <segue destination="Wad-Fq-5E7" kind="push" identifier="showSubscriptionsSegue" id="Saq-0q-EeB"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.068662479360792755" green="0.14878320592661259" blue="0.19771938131313127" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="post_PhotoAndText" rowHeight="183" id="YrG-rW-Rhi" customClass="VSPostCell">
+                                <rect key="frame" x="0.0" y="384" width="375" height="183"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YrG-rW-Rhi" id="Nea-UL-Hnc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="182"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pQ5-O6-9bM">
+                                            <rect key="frame" x="10" y="164" width="70" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="9"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5hw-Ak-Pcg">
+                                            <rect key="frame" x="10" y="8" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IhW-ii-v6O">
+                                            <rect key="frame" x="311" y="165" width="33" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ejk-hs-H2C">
+                                            <rect key="frame" x="224" y="164" width="61" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tYb-AS-0lb">
+                                            <rect key="frame" x="279" y="165" width="30" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nse-ln-cfh">
+                                            <rect key="frame" x="343" y="165" width="31" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" id="moO-79-GU3">
+                                            <rect key="frame" x="106" y="33" width="259" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2dL-yc-aoX">
+                                            <rect key="frame" x="63" y="26" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ФИО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YjK-g0-N5U">
+                                            <rect key="frame" x="75" y="8" width="280" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="u22-Q4-rsW">
+                                            <rect key="frame" x="20" y="96" width="340" height="51"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RCb-LT-ar4">
+                                                <size key="itemSize" width="50" height="50"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="dt6-gR-kP2" customClass="VSCollectionViewCell">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="hT0-oL-VGZ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <connections>
+                                                        <outlet property="albumCoverCell" destination="hT0-oL-VGZ" id="bTF-nI-Ut3"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="YrG-rW-Rhi" id="etv-sz-rse"/>
+                                                <outlet property="delegate" destination="YrG-rW-Rhi" id="4mC-qo-Ees"/>
+                                            </connections>
+                                        </collectionView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NRl-aA-oru">
+                                            <rect key="frame" x="10" y="71" width="357" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.97698831350000004" green="1" blue="0.95281769989999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.73711044020000005" green="0.81885258839999997" blue="0.75974805079999996" alpha="0.22" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="avatarImage" destination="5hw-Ak-Pcg" id="oHu-BD-hbv"/>
+                                    <outlet property="collectionView" destination="u22-Q4-rsW" id="G7r-Jt-vpo"/>
+                                    <outlet property="commentsCountLabel" destination="tYb-AS-0lb" id="ZZT-lb-gKn"/>
+                                    <outlet property="dateLabel" destination="pQ5-O6-9bM" id="bTs-zT-3sH"/>
+                                    <outlet property="likesCountLabel" destination="nse-ln-cfh" id="PgN-X8-sWe"/>
+                                    <outlet property="ownerNameLabel" destination="YjK-g0-N5U" id="kly-U3-jHw"/>
+                                    <outlet property="postTextLabel" destination="NRl-aA-oru" id="9bR-mh-gw2"/>
+                                    <outlet property="repostOwnerImage" destination="2dL-yc-aoX" id="N2E-or-IRg"/>
+                                    <outlet property="repostOwnerNameLabel" destination="moO-79-GU3" id="AOC-yE-dgQ"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VSPhotoAlbumsCell" rowHeight="105" id="GED-ZG-O6r" customClass="VSPhotoAlbumsCell">
+                                <rect key="frame" x="0.0" y="567" width="375" height="105"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GED-ZG-O6r" id="WyD-7t-oPt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wTZ-HV-nNp">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="lhG-Ga-7yn">
+                                                <size key="itemSize" width="95" height="94"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="Gak-3Z-nHk" customClass="VSCollectionViewCell">
+                                                    <rect key="frame" x="5" y="5" width="95" height="94"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="95" height="94"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9lU-ee-wg1">
+                                                                <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <connections>
+                                                        <outlet property="albumCoverCell" destination="9lU-ee-wg1" id="54g-73-bev"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.068662479360792755" green="0.14878320592661259" blue="0.19771938131313127" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="collectionView" destination="wTZ-HV-nNp" id="ECf-rZ-H3d"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="post_OnlyText" rowHeight="121" id="wSP-I0-GMl" customClass="VSPostCell">
+                                <rect key="frame" x="0.0" y="672" width="375" height="121"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wSP-I0-GMl" id="Hc1-UY-obR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ULi-fN-636">
+                                            <rect key="frame" x="10" y="74" width="360" height="13"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ФИО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U5N-UD-hQA">
+                                            <rect key="frame" x="75" y="8" width="280" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="36Y-jc-Z4A">
+                                            <rect key="frame" x="10" y="8" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aRC-0K-3N6">
+                                            <rect key="frame" x="10" y="102" width="120" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="9"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CpO-dP-gt0">
+                                            <rect key="frame" x="303" y="103" width="33" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x2I-RX-De8">
+                                            <rect key="frame" x="223" y="103" width="61" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tWO-qU-6d6">
+                                            <rect key="frame" x="278" y="103" width="18" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" id="J4n-6g-b5w">
+                                            <rect key="frame" x="106" y="33" width="259" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="AgQ-n2-MC3">
+                                            <rect key="frame" x="63" y="26" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RLH-9i-u56">
+                                            <rect key="frame" x="339" y="103" width="31" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.97698831350000004" green="1" blue="0.95281769989999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.73711044020000005" green="0.81885258839999997" blue="0.75974805079999996" alpha="0.22" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="avatarImage" destination="36Y-jc-Z4A" id="CXl-Vo-TPJ"/>
+                                    <outlet property="commentsCountLabel" destination="tWO-qU-6d6" id="PSv-Td-xAZ"/>
+                                    <outlet property="dateLabel" destination="aRC-0K-3N6" id="ODI-Hq-jBX"/>
+                                    <outlet property="likesCountLabel" destination="RLH-9i-u56" id="9Wk-qh-b5V"/>
+                                    <outlet property="ownerNameLabel" destination="U5N-UD-hQA" id="kxm-7d-Gcl"/>
+                                    <outlet property="postTextLabel" destination="ULi-fN-636" id="zwB-ix-bRU"/>
+                                    <outlet property="repostOwnerImage" destination="AgQ-n2-MC3" id="3vm-yJ-gSH"/>
+                                    <outlet property="repostOwnerNameLabel" destination="J4n-6g-b5w" id="Juf-wi-HUS"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="post_OnlyPhoto" rowHeight="159" id="Ck1-OZ-Vl1" customClass="VSPostCell">
+                                <rect key="frame" x="0.0" y="793" width="375" height="159"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ck1-OZ-Vl1" id="dDq-0l-lcD">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mzB-Mk-Cw5">
+                                            <rect key="frame" x="10" y="140" width="98" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="9"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" id="PEE-Gz-gpF">
+                                            <rect key="frame" x="10" y="8" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wam-FS-kXb">
+                                            <rect key="frame" x="297" y="141" width="33" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jhA-Ra-TAJ">
+                                            <rect key="frame" x="208" y="141" width="61" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Vm-ga-maO">
+                                            <rect key="frame" x="271" y="141" width="18" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yHS-Nb-dLd">
+                                            <rect key="frame" x="338" y="141" width="31" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" id="vun-wg-JEe">
+                                            <rect key="frame" x="106" y="33" width="259" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="C0l-gc-ZYU">
+                                            <rect key="frame" x="63" y="26" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ФИО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6e5-Rz-f6s">
+                                            <rect key="frame" x="75" y="8" width="280" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="pNT-ue-Sd5">
+                                            <rect key="frame" x="20" y="74" width="335" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fGo-zL-8xK">
+                                                <size key="itemSize" width="50" height="50"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="FVu-cs-kOp" customClass="VSCollectionViewCell">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="cMf-30-ilU">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <connections>
+                                                        <outlet property="albumCoverCell" destination="cMf-30-ilU" id="GbV-kc-2B7"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="Ck1-OZ-Vl1" id="f7U-gR-YpN"/>
+                                                <outlet property="delegate" destination="Ck1-OZ-Vl1" id="PIO-cT-rBg"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.97698831350000004" green="1" blue="0.95281769989999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.73711044020000005" green="0.81885258839999997" blue="0.75974805079999996" alpha="0.22" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="avatarImage" destination="PEE-Gz-gpF" id="i0G-xb-yHc"/>
+                                    <outlet property="collectionView" destination="pNT-ue-Sd5" id="I9e-HP-P9k"/>
+                                    <outlet property="commentsCountLabel" destination="0Vm-ga-maO" id="C9y-V4-L7O"/>
+                                    <outlet property="dateLabel" destination="mzB-Mk-Cw5" id="kpl-Ke-UR9"/>
+                                    <outlet property="likesCountLabel" destination="yHS-Nb-dLd" id="ZmN-kL-2R7"/>
+                                    <outlet property="ownerNameLabel" destination="6e5-Rz-f6s" id="c4X-N8-cSz"/>
+                                    <outlet property="repostOwnerImage" destination="C0l-gc-ZYU" id="XmY-Ai-GPK"/>
+                                    <outlet property="repostOwnerNameLabel" destination="vun-wg-JEe" id="MEq-21-rZD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="12A-Oh-UfJ" id="Iqw-w0-jrq"/>
+                            <outlet property="delegate" destination="12A-Oh-UfJ" id="TkR-Wg-Cvp"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Aid-JR-tbx"/>
+                        <barButtonItem title="Вверх" id="7VJ-fR-UaA">
+                            <color key="tintColor" red="0.3292495265" green="0.3292495265" blue="0.3292495265" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="jumpToTopOfPageAction:" destination="12A-Oh-UfJ" id="eGO-mk-lIF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="2XL-Kw-9GN"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="ccN-uQ-4qb">
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="Avp-dK-dC5">
+                            <connections>
+                                <action selector="goToHomePageAction:" destination="12A-Oh-UfJ" id="4Ej-vN-UI8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EJw-1u-XqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.5" y="-240.5"/>
+        </scene>
+        <!--MessageVC-->
+        <scene sceneID="JI5-ia-qDH">
+            <objects>
+                <viewController id="JxF-Kx-YCG" customClass="VSMessageVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DcG-NL-dfM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="93" sectionHeaderHeight="28" sectionFooterHeight="28" id="FDN-Y6-gcA">
+                                <rect key="frame" x="16" y="179" width="288" height="390"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dialogCell" rowHeight="93" id="oS7-gY-qQa" customClass="VSDialogCell">
+                                        <rect key="frame" x="0.0" y="92" width="288" height="93"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oS7-gY-qQa" id="cnZ-Zc-UQ4">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="93"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageSelectedOff.png" id="0Xq-vj-RxW">
+                                                    <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cKh-me-2l1">
+                                                    <rect key="frame" x="80" y="15" width="440" height="68"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kYY-c8-63f">
+                                                    <rect key="frame" x="520" y="15" width="40" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImage" destination="0Xq-vj-RxW" id="zQ4-pe-ieq"/>
+                                            <outlet property="messageDateLabel" destination="kYY-c8-63f" id="KhU-yx-g5z"/>
+                                            <outlet property="messageTextLabel" destination="cKh-me-2l1" id="rbZ-eM-k7r"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" textAlignment="justified" id="sfB-2D-3Nn">
+                                <rect key="frame" x="15" y="50" width="290" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99368953289999995" green="0.97965054920000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" returnKeyType="send"/>
+                            </textView>
+                        </subviews>
+                    </view>
+                    <navigationItem key="navigationItem" id="AEz-X8-TGh"/>
+                    <connections>
+                        <outlet property="messageTextView" destination="sfB-2D-3Nn" id="KRV-Gt-0qh"/>
+                        <outlet property="tableView" destination="FDN-Y6-gcA" id="A6f-j5-gim"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FCR-fi-VAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84.266666666666666" y="494.15999999999997"/>
+        </scene>
+        <!--User Web PageVC-->
+        <scene sceneID="dgY-9X-8vw">
+            <objects>
+                <viewController storyboardIdentifier="UserWebPageVC" id="EVz-Wc-IDJ" customClass="UserWebPageVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ztX-D0-cds">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="hfM-y9-9Cc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="hfM-y9-9Cc" id="jPQ-Z6-AuW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oGm-gt-n1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-248" y="-747.86666666666667"/>
+        </scene>
+        <!--FriendVC-->
+        <scene sceneID="frB-hG-Dv7">
+            <objects>
+                <viewController id="Wad-Fq-5E7" customClass="VSFriendVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NOI-Mb-LCg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aCV-Ol-STg" appends="YES" id="eAi-DU-xWX"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="BA8-gJ-JT8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iy3-Pc-zRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="aCV-Ol-STg">
+                    <connections>
+                        <action selector="longPress:" destination="Wad-Fq-5E7" id="KFb-bu-VAp"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="142.40000000000001" y="-888.91999999999996"/>
+        </scene>
+        <!--UserProfile-->
+        <scene sceneID="Tmj-by-hWf">
+            <objects>
+                <navigationController title="UserProfile" id="nqV-7p-6VI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QHz-aR-ymC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="12A-Oh-UfJ" kind="relationship" relationship="rootViewController" id="0jP-ct-YFd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09O-Fj-vED" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-244.26666666666665" y="-120.22666666666666"/>
+        </scene>
+        <!--Group PageVC-->
+        <scene sceneID="46Z-bg-ly5">
+            <objects>
+                <tableViewController storyboardIdentifier="VSGroupPageVC" id="gMf-lG-Uk2" customClass="VSGroupPageVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="261" sectionHeaderHeight="28" sectionFooterHeight="28" id="iXA-Y8-NoP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VSGroupInfoCell" rowHeight="261" id="mad-Ld-glV" customClass="VSGroupInfoCell">
+                                <rect key="frame" x="0.0" y="28" width="320" height="261"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mad-Ld-glV" id="zyz-tF-QYq">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailUserBg.jpg" id="fHa-g0-GJg">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="260"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" id="SJY-Bh-e5u">
+                                            <rect key="frame" x="228" y="47" width="352" height="161"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q6M-da-gbY">
+                                            <rect key="frame" x="0.0" y="223" width="600" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.07217028114" green="0.1563841839" blue="0.2078203914" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                            <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <state key="normal" title="Участники">
+                                                <color key="titleColor" red="0.96195275379028622" green="1" blue="0.88802899257683054" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="membersGetAction:" destination="mad-Ld-glV" eventType="touchUpInside" id="0An-87-YmL"/>
+                                            </connections>
+                                        </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="0Z8-hD-3rH">
+                                            <rect key="frame" x="15" y="10" width="198" height="198"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" id="rGe-Gi-zdM">
+                                            <rect key="frame" x="228" y="10" width="351" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="81M-nR-jqX">
+                                            <rect key="frame" x="500" y="223" width="100" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.9619527538" green="1" blue="0.88802899260000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatar" destination="0Z8-hD-3rH" id="HpS-Oq-5Ze"/>
+                                    <outlet property="groupNameLabel" destination="rGe-Gi-zdM" id="BYC-bo-TqM"/>
+                                    <outlet property="membersCountLabel" destination="81M-nR-jqX" id="EJw-1p-043"/>
+                                    <outlet property="statusLabel" destination="SJY-Bh-e5u" id="SpR-Qf-tE9"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VSPhotoAlbumsCell" rowHeight="105" id="KUX-Ti-vRt" customClass="VSPhotoAlbumsCell">
+                                <rect key="frame" x="0.0" y="289" width="320" height="105"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KUX-Ti-vRt" id="3E2-du-kE9">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="sCT-bc-vEc">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="104"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="5" id="Rgr-We-pDh">
+                                                <size key="itemSize" width="95" height="95"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="ijw-Ug-pbK" customClass="VSCollectionViewCell">
+                                                    <rect key="frame" x="5" y="5" width="95" height="95"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bWm-pb-vLx">
+                                                                <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <connections>
+                                                        <outlet property="albumCoverCell" destination="bWm-pb-vLx" id="HrK-GW-riO"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="collectionView" destination="sCT-bc-vEc" id="ecq-O2-qBS"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VSWallMessageCell" rowHeight="95" id="0XB-B0-nxL" customClass="VSWallMessageCell">
+                                <rect key="frame" x="0.0" y="394" width="320" height="95"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0XB-B0-nxL" id="4LB-hm-3Nt">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Написать сообщение" textAlignment="natural" minimumFontSize="17" id="lXD-z0-RpM">
+                                            <rect key="frame" x="8" y="32" width="584" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="0XB-B0-nxL" id="Ccd-a5-iiP"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество записей стены:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Eh-ee-kgu">
+                                            <rect key="frame" x="10" y="8" width="300" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Iah-ai-eCj">
+                                            <rect key="frame" x="8" y="66" width="101" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Отправить">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="sendMessageAction:" destination="0XB-B0-nxL" eventType="touchUpInside" id="Qh3-we-YPd"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.79186395200000004" green="0.79186395200000004" blue="0.79186395200000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="messageTextField" destination="lXD-z0-RpM" id="PcR-wq-UhV"/>
+                                    <outlet property="postsCountLabel" destination="7Eh-ee-kgu" id="iyp-lC-Csd"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VSPostCell2" rowHeight="109" id="4e0-uP-zbX" customClass="VSPostCell">
+                                <rect key="frame" x="0.0" y="489" width="320" height="109"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4e0-uP-zbX" id="SGk-Up-o1u">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="kAI-7Q-676">
+                                            <rect key="frame" x="0.0" y="90" width="600" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.49894045300000001" green="0.76767676770000004" blue="0.70586119410000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wtH-0v-ZFF">
+                                            <rect key="frame" x="10" y="90" width="235" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="9"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J4T-Z3-AjI">
+                                            <rect key="frame" x="20" y="67" width="560" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" id="AsI-DQ-SsU">
+                                            <rect key="frame" x="10" y="8" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TRy-RT-dpP">
+                                            <rect key="frame" x="531" y="91" width="33" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9bk-cR-3aU">
+                                            <rect key="frame" x="429" y="91" width="61" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hUx-Ef-zZ1">
+                                            <rect key="frame" x="490" y="91" width="18" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hCL-1V-0de">
+                                            <rect key="frame" x="564" y="91" width="31" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" id="Pdg-h6-cGH">
+                                            <rect key="frame" x="106" y="33" width="259" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="zdf-sl-Fh3">
+                                            <rect key="frame" x="63" y="26" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ФИО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S9L-up-Hre">
+                                            <rect key="frame" x="75" y="8" width="280" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.97698831350000004" green="1" blue="0.95281769989999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.73711044020000005" green="0.81885258839999997" blue="0.75974805079999996" alpha="0.22" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="avatarImage" destination="AsI-DQ-SsU" id="EfH-bT-UE5"/>
+                                    <outlet property="commentsCountLabel" destination="hUx-Ef-zZ1" id="ovv-Ku-NHx"/>
+                                    <outlet property="dateLabel" destination="wtH-0v-ZFF" id="wl8-rf-D1j"/>
+                                    <outlet property="likesCountLabel" destination="hCL-1V-0de" id="5N8-aJ-5gp"/>
+                                    <outlet property="ownerNameLabel" destination="S9L-up-Hre" id="3oG-1t-ZM9"/>
+                                    <outlet property="postTextLabel" destination="J4T-Z3-AjI" id="i6M-WX-6PT"/>
+                                    <outlet property="repostOwnerImage" destination="zdf-sl-Fh3" id="HbV-fD-7pe"/>
+                                    <outlet property="repostOwnerNameLabel" destination="Pdg-h6-cGH" id="gDh-Tu-w0C"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="post_PhotoAndText" rowHeight="183" id="oIr-6u-CTu" customClass="VSPostCell">
+                                <rect key="frame" x="0.0" y="598" width="320" height="183"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oIr-6u-CTu" id="8tQ-nD-6Iw">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="182"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="YFw-88-CsZ">
+                                            <rect key="frame" x="0.0" y="164" width="600" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.49894045300000001" green="0.76767676770000004" blue="0.70586119410000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OG2-UE-Qdr">
+                                            <rect key="frame" x="10" y="164" width="235" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="9"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="go9-kp-bJk">
+                                            <rect key="frame" x="10" y="8" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fQ0-RP-hHW">
+                                            <rect key="frame" x="531" y="165" width="33" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CzO-Ly-pAK">
+                                            <rect key="frame" x="429" y="165" width="61" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KBs-tu-TAA">
+                                            <rect key="frame" x="490" y="165" width="18" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MC7-TL-coB">
+                                            <rect key="frame" x="564" y="165" width="31" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" id="Gvt-s9-bhe">
+                                            <rect key="frame" x="106" y="33" width="259" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5qb-rO-BQe">
+                                            <rect key="frame" x="63" y="26" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ФИО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LjI-Ot-aEr">
+                                            <rect key="frame" x="75" y="8" width="280" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="nYM-dc-Bfg">
+                                            <rect key="frame" x="20" y="96" width="560" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tRw-HS-Yoo">
+                                                <size key="itemSize" width="50" height="50"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="IQB-3Y-WSj" customClass="VSCollectionViewCell">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fFp-pX-GaF">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <connections>
+                                                        <outlet property="albumCoverCell" destination="fFp-pX-GaF" id="DRy-Ij-WMi"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="oIr-6u-CTu" id="Bp9-4k-TXK"/>
+                                                <outlet property="delegate" destination="oIr-6u-CTu" id="7kU-NW-2zI"/>
+                                            </connections>
+                                        </collectionView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2px-Gk-BNY">
+                                            <rect key="frame" x="10" y="71" width="580" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.97698831350000004" green="1" blue="0.95281769989999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.73711044020000005" green="0.81885258839999997" blue="0.75974805079999996" alpha="0.22" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="avatarImage" destination="go9-kp-bJk" id="gqW-fz-IQm"/>
+                                    <outlet property="collectionView" destination="nYM-dc-Bfg" id="qCc-3e-a0d"/>
+                                    <outlet property="commentsCountLabel" destination="KBs-tu-TAA" id="kW3-6y-ZvD"/>
+                                    <outlet property="dateLabel" destination="OG2-UE-Qdr" id="Nrq-ML-PPb"/>
+                                    <outlet property="likesCountLabel" destination="MC7-TL-coB" id="MfK-pR-MOW"/>
+                                    <outlet property="ownerNameLabel" destination="LjI-Ot-aEr" id="eWp-HT-ZaG"/>
+                                    <outlet property="postTextLabel" destination="2px-Gk-BNY" id="SBw-wh-T81"/>
+                                    <outlet property="repostOwnerImage" destination="5qb-rO-BQe" id="CME-dU-ZO4"/>
+                                    <outlet property="repostOwnerNameLabel" destination="Gvt-s9-bhe" id="l6G-Xb-yID"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="post_OnlyPhoto" rowHeight="159" id="yWO-qb-kLP" customClass="VSPostCell">
+                                <rect key="frame" x="0.0" y="781" width="320" height="159"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yWO-qb-kLP" id="iQE-Rn-YNn">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="158"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="wbS-j1-NiX">
+                                            <rect key="frame" x="0.0" y="140" width="600" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.49894045300000001" green="0.76767676770000004" blue="0.70586119410000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f3X-HV-XfT">
+                                            <rect key="frame" x="10" y="140" width="235" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="9"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" id="hSb-lk-uqc">
+                                            <rect key="frame" x="10" y="8" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UU5-kM-1Sq">
+                                            <rect key="frame" x="531" y="141" width="33" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ECa-ta-lw3">
+                                            <rect key="frame" x="429" y="141" width="61" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C6Q-PK-23D">
+                                            <rect key="frame" x="490" y="141" width="18" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pjn-lu-McF">
+                                            <rect key="frame" x="564" y="141" width="31" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" id="it8-0V-7Q4">
+                                            <rect key="frame" x="106" y="33" width="259" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="yBM-49-tfT">
+                                            <rect key="frame" x="63" y="26" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ФИО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d7n-Ad-VYw">
+                                            <rect key="frame" x="75" y="8" width="280" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="H1k-hB-0p4">
+                                            <rect key="frame" x="20" y="74" width="560" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eYe-ds-ZrC">
+                                                <size key="itemSize" width="50" height="50"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="awt-aa-K2g" customClass="VSCollectionViewCell">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3Ne-O5-Uin">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <connections>
+                                                        <outlet property="albumCoverCell" destination="3Ne-O5-Uin" id="D1R-UX-GfS"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="yWO-qb-kLP" id="kag-1I-BRZ"/>
+                                                <outlet property="delegate" destination="yWO-qb-kLP" id="ffj-0k-7JW"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.97698831350000004" green="1" blue="0.95281769989999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.73711044020000005" green="0.81885258839999997" blue="0.75974805079999996" alpha="0.22" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="avatarImage" destination="hSb-lk-uqc" id="WBg-un-lah"/>
+                                    <outlet property="collectionView" destination="H1k-hB-0p4" id="b9w-Ty-LYk"/>
+                                    <outlet property="commentsCountLabel" destination="C6Q-PK-23D" id="BBK-4E-3rY"/>
+                                    <outlet property="dateLabel" destination="f3X-HV-XfT" id="DnN-QG-OBt"/>
+                                    <outlet property="likesCountLabel" destination="Pjn-lu-McF" id="GYG-ch-2yL"/>
+                                    <outlet property="ownerNameLabel" destination="d7n-Ad-VYw" id="xA6-QZ-1By"/>
+                                    <outlet property="repostOwnerImage" destination="yBM-49-tfT" id="j74-dL-3Sr"/>
+                                    <outlet property="repostOwnerNameLabel" destination="it8-0V-7Q4" id="6PU-LN-5jc"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="post_OnlyText" rowHeight="121" id="omN-vL-tT6" customClass="VSPostCell">
+                                <rect key="frame" x="0.0" y="940" width="320" height="121"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="omN-vL-tT6" id="fgO-k0-K15">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="lLg-X7-Q40">
+                                            <rect key="frame" x="0.0" y="102" width="600" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.49894045300000001" green="0.76767676770000004" blue="0.70586119410000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1U9-DG-OGv">
+                                            <rect key="frame" x="10" y="102" width="235" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="9"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MLx-uy-Cue">
+                                            <rect key="frame" x="20" y="74" width="560" height="13"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ODs-QY-XvT">
+                                            <rect key="frame" x="10" y="8" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nIu-Jo-eKI">
+                                            <rect key="frame" x="531" y="103" width="33" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="865-N1-lWu">
+                                            <rect key="frame" x="429" y="103" width="61" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O6u-Y5-28z">
+                                            <rect key="frame" x="490" y="103" width="18" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wbb-oK-VYu">
+                                            <rect key="frame" x="564" y="103" width="31" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" id="Fde-6Y-Yp4">
+                                            <rect key="frame" x="106" y="33" width="259" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="r6R-hP-uCF">
+                                            <rect key="frame" x="63" y="26" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ФИО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BQd-3a-IZ8">
+                                            <rect key="frame" x="75" y="8" width="280" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.97698831350000004" green="1" blue="0.95281769989999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.73711044020000005" green="0.81885258839999997" blue="0.75974805079999996" alpha="0.22" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="avatarImage" destination="ODs-QY-XvT" id="coS-ve-0ya"/>
+                                    <outlet property="commentsCountLabel" destination="O6u-Y5-28z" id="GOY-jH-TwL"/>
+                                    <outlet property="dateLabel" destination="1U9-DG-OGv" id="U7f-mu-1kY"/>
+                                    <outlet property="likesCountLabel" destination="wbb-oK-VYu" id="MSG-g7-vzi"/>
+                                    <outlet property="ownerNameLabel" destination="BQd-3a-IZ8" id="r7A-x0-oWT"/>
+                                    <outlet property="postTextLabel" destination="MLx-uy-Cue" id="344-xj-uQP"/>
+                                    <outlet property="repostOwnerImage" destination="r6R-hP-uCF" id="4Jo-Pr-Fdg"/>
+                                    <outlet property="repostOwnerNameLabel" destination="Fde-6Y-Yp4" id="FOk-qc-lZD"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VSPostCell" rowHeight="109" id="H6l-CG-fI1" customClass="VSPostCell">
+                                <rect key="frame" x="0.0" y="1061" width="320" height="109"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H6l-CG-fI1" id="p1d-3Q-wTS">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="PPQ-0n-QgY">
+                                            <rect key="frame" x="0.0" y="90" width="600" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.49894045300000001" green="0.76767676770000004" blue="0.70586119410000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4vc-i3-h7B">
+                                            <rect key="frame" x="10" y="90" width="235" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="9"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" id="a1T-V9-PoL">
+                                            <rect key="frame" x="10" y="8" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HQm-jZ-wRn">
+                                            <rect key="frame" x="531" y="91" width="33" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8U9-cG-yV4">
+                                            <rect key="frame" x="429" y="91" width="61" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="11"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qMj-rd-lHV">
+                                            <rect key="frame" x="490" y="91" width="18" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ltl-go-8Fj">
+                                            <rect key="frame" x="564" y="91" width="31" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ФИО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MsE-Xb-P7O">
+                                            <rect key="frame" x="75" y="8" width="280" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R2Z-V1-lJz">
+                                            <rect key="frame" x="30" y="58" width="550" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.97698831350000004" green="1" blue="0.95281769989999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.73711044020000005" green="0.81885258839999997" blue="0.75974805079999996" alpha="0.22" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="avatarImage" destination="a1T-V9-PoL" id="8VR-rN-OHp"/>
+                                    <outlet property="commentsCountLabel" destination="qMj-rd-lHV" id="lDe-fV-a6s"/>
+                                    <outlet property="dateLabel" destination="4vc-i3-h7B" id="p10-NV-7dg"/>
+                                    <outlet property="likesCountLabel" destination="ltl-go-8Fj" id="M9V-rM-nZS"/>
+                                    <outlet property="ownerNameLabel" destination="MsE-Xb-P7O" id="3Bm-BA-re4"/>
+                                    <outlet property="postTextLabel" destination="R2Z-V1-lJz" id="kdR-Q1-HLK"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gMf-lG-Uk2" id="Kj5-yf-H4T"/>
+                            <outlet property="delegate" destination="gMf-lG-Uk2" id="G3g-Km-pyD"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="tul-zb-kzn"/>
+                        <barButtonItem title="Вверх" id="QqJ-gp-ucJ">
+                            <connections>
+                                <action selector="jumpToTopOfPageAction:" destination="gMf-lG-Uk2" id="47F-ng-UyR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="wD4-TI-Flr"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZ1-wG-JBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-244.26666666666665" y="513.09333333333336"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1.jpg" width="492" height="472"/>
+        <image name="ImageSelectedOff.png" width="44" height="44"/>
+        <image name="detailUserBg.jpg" width="1900" height="1425"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="nwV-y9-nb9"/>
+    </inferredMetricsTieBreakers>
+</document>
