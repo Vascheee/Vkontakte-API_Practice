@@ -1,0 +1,1 @@
+# Vkontakte-API_Practice is not created as a full-featured product, so the design and performance has received little attention. This application is written to consolidate my study of AFNetworking capabilities, practices of interaction with the server API, and parsing JSON.
