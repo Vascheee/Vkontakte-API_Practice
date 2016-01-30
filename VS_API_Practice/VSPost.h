@@ -35,6 +35,9 @@ typedef NS_ENUM(unsigned int, PostContentType) {
 @property (strong, nonatomic) NSString  *text;
 @property (strong, nonatomic) NSString  *date;
 @property (strong, nonatomic) NSString  *postImageURL;
+@property (strong, nonatomic) NSString  *videoImageURL;
+@property (strong, nonatomic) NSString  *videofileName;
+
 @property (strong, nonatomic) NSString  *repostOwnerImageString;
 @property (strong, nonatomic) NSString  *repostOwnerID;
 @property (strong, nonatomic) NSString  *fromUserID;

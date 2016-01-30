@@ -18,7 +18,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *commentsCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *likesCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *repostOwnerNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *videoNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *videoInfoLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView * videoImView;
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImage;
 @property (weak, nonatomic) IBOutlet UIImageView *repostOwnerImage;
 @property (weak, nonatomic) IBOutlet UIImageView *postImage;

@@ -29,17 +29,13 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     messageArray = [NSMutableArray array];
-    self.messageTextView.layer.cornerRadius = 6;
-    self.messageTextView.layer.borderWidth = 1.f;
-    self.messageTextView.layer.borderColor =
-    [[UIColor colorWithRed:0.0 green:0.0001 blue:0.3785 alpha:0.61]CGColor];
+  
     [self getChat];
     
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self.messageTextView becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -96,7 +92,6 @@
         [cell.avatarImage setImageWithURL:[NSURL URLWithString:self.owner.smallImageURLString]];
     } else {
         [cell.avatarImage setImageWithURL:[NSURL URLWithString:self.addressee.smallImageURLString]];
-
     }
     return cell;
 }
@@ -136,7 +131,27 @@
     return YES;
 }
 
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@"Введите сообщение..."]) {
+        textView.text = @"";
+        textView.textColor = [UIColor blackColor]; }
+    [textView becomeFirstResponder];
+}
+
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@""]) {
+        textView.text = @"Введите сообщение...";
+        textView.textColor = [UIColor lightGrayColor];
+    }
+    [textView resignFirstResponder];
+}
+
+
 - (IBAction)backButtonAction:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 @end

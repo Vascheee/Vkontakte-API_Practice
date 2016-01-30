@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040878D31C4553E20043CD83 /* VSVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 040878D21C4553E20043CD83 /* VSVideo.m */; };
 		040C90771C2452EA0019FA35 /* VSMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C90761C2452EA0019FA35 /* VSMessageVC.m */; };
 		04115B651BE7E399006400FC /* heart_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04115B641BE7E399006400FC /* heart_icon.png */; };
 		043DA3FE1C2EA36700734876 /* VSDialogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DA3FD1C2EA36700734876 /* VSDialogCell.m */; };
@@ -64,8 +63,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		040878D11C4553E20043CD83 /* VSVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSVideo.h; sourceTree = "<group>"; };
-		040878D21C4553E20043CD83 /* VSVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSVideo.m; sourceTree = "<group>"; };
 		040C90751C2452EA0019FA35 /* VSMessageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSMessageVC.h; sourceTree = "<group>"; };
 		040C90761C2452EA0019FA35 /* VSMessageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSMessageVC.m; sourceTree = "<group>"; };
 		04115B641BE7E399006400FC /* heart_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_icon.png; sourceTree = "<group>"; };
@@ -189,8 +186,6 @@
 				04F10D4B1BF9EE5500F75079 /* VSPhoto.m */,
 				047C494C1C32E1FF002F682C /* VSMessage.h */,
 				047C494D1C32E1FF002F682C /* VSMessage.m */,
-				040878D11C4553E20043CD83 /* VSVideo.h */,
-				040878D21C4553E20043CD83 /* VSVideo.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -533,7 +528,6 @@
 				047C494E1C32E1FF002F682C /* VSMessage.m in Sources */,
 				04974B4B1BCFE8B300396970 /* VSUserInfoCell.m in Sources */,
 				0448C68F1BCEC5EF00715E01 /* VSPost.m in Sources */,
-				040878D31C4553E20043CD83 /* VSVideo.m in Sources */,
 				04C1B2451BCEAB00002909CE /* main.m in Sources */,
 				04BF03151BD7CD46003D447D /* VSUserConnectionsCell.m in Sources */,
 				04F7512E1C0B91180007F3B7 /* VSSearchBarCell.m in Sources */,

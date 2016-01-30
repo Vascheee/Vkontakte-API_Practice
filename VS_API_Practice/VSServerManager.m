@@ -410,7 +410,7 @@ static NSString* kExpirationDate = @"kExpirationDate";
                               success:^(AFHTTPRequestOperation * _Nonnull operation, NSDictionary *responseObject) {
                                   NSArray * dictionaryArray = responseObject[@"response"][@"items"];
                                   NSMutableArray *photoArray = [NSMutableArray array];
-                                  
+                                 // NSLog(@"%@", dictionaryArray);
                                   for (NSDictionary *dict in dictionaryArray) {
                                       VSPhoto *album = [[VSPhoto alloc]
                                                                  initWithServerResponse:dict];

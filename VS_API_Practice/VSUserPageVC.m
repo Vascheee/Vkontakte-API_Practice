@@ -72,21 +72,7 @@ static NSInteger postTextLabelWidth = 335;
     }
     self.navigationController.navigationBar.backgroundColor =
     [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0];
-    [self.navigationController setToolbarHidden:YES];
-    toolBar = self.navigationController.toolbar;
-    CGRect rect = CGRectMake(0, 0, 1, 1);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:0.0
-                                                             green:0.0
-                                                              blue:0.0
-                                                             alpha:0.2] CGColor]);
-    CGContextFillRect(context, rect);
-    UIImage *transparentImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    [toolBar setBackgroundImage:transparentImage
-             forToolbarPosition:UIBarPositionBottom barMetrics:UIBarMetricsDefault];
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    collection.scrollsToTop = NO;
 
     
     photoArray         = [NSMutableArray new];
@@ -116,6 +102,8 @@ static NSInteger postTextLabelWidth = 335;
     self.refreshControl = refControl;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
+
+
 
 
 - (void)sendRequests {
@@ -255,6 +243,7 @@ static NSInteger postTextLabelWidth = 335;
             collection = cell.collectionView;
             cell.collectionView.dataSource = self;
             cell.collectionView.delegate = self;
+            cell.collectionView.scrollsToTop = NO;
             return cell;
         } else {
             VSPhotoAlbumsCell *cell = [tableView dequeueReusableCellWithIdentifier:albumsIdentifier];
@@ -272,12 +261,21 @@ static NSInteger postTextLabelWidth = 335;
         VSPost *post = postArray[indexPath.row-4];
         VSPostCell *cell = [tableView dequeueReusableCellWithIdentifier:post.postType];
         [cell configureWithPost:post];
-        if (!post.postType) { NSLog(@"PostType = nil. Post - %d", indexPath.row-4); }
+        cell.collectionView.scrollsToTop = NO;
+        [cell.collectionView.collectionViewLayout invalidateLayout];
+
+        if (!post.postType) { NSLog(@"PostType = nil. Post - %ld", indexPath.row-4); }
         return cell;
     }
     return nil;
 }
+- (void)tableView:(UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+}
 
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath {
+    
+}
 
 
 #pragma mark - UITableViewDelegate
@@ -294,15 +292,24 @@ static NSInteger postTextLabelWidth = 335;
     }
     VSPost *post = postArray[indexPath.row- 4];
     CGFloat heightPost;
+    CGFloat heightPhoto;
+  
     if ([post.postType isEqualToString:@"post_OnlyText"]) {
-       return heightPost = [VSPostCell heightForCellByText:post.text forWidth:postTextLabelWidth] +110;
+        heightPost = [VSPostCell heightForCellByText:post.text forWidth:postTextLabelWidth] +110;
+        if (post.videoImageURL) {
+            return  heightPost +280;
+        }
+        return heightPost;
     }
     if ([post.postType isEqualToString:@"post_OnlyPhoto"]) {
-        return [VSPostCell heightForCellByPhotoArray:post.photoArrayInPost forWidth:[tableView bounds].size.width];
+        return [VSPostCell heightForCellByPhotoArray:post.photoArrayInPost
+                                            forWidth:[tableView bounds].size.width];
     }
     if ([post.postType isEqualToString:@"post_PhotoAndText"]) {
         heightPost = [VSPostCell heightForCellByText:post.text forWidth:postTextLabelWidth];
-        return heightPost + [VSPostCell heightForCellByPhotoArray:post.photoArrayInPost forWidth:[tableView bounds].size.width];
+        heightPhoto =  [VSPostCell heightForCellByPhotoArray:post.photoArrayInPost forWidth:[tableView bounds].size.width];
+        NSInteger heightAll = heightPost + heightPhoto +50;
+        return heightAll;
     }
     return 44;
 }
@@ -312,7 +319,13 @@ static NSInteger postTextLabelWidth = 335;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-
+- (BOOL) scrollViewShouldScrollToTop:(UIScrollView*) scrollView {
+    if (scrollView == self.tableView) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 
 #pragma mark - Segue
 /*=================================================================================================*/
@@ -359,8 +372,12 @@ static NSInteger postTextLabelWidth = 335;
 
 
 - (void)prepareMWPhotoArray {
+    MWPhoto *photoMW;
     for (VSPhoto *photo in photoArray) {
-        MWPhoto *photoMW = [[MWPhoto alloc] initWithURL:[NSURL URLWithString:photo.urlString_photo_1280]];
+        if (!photo.urlString_photo_1280) {
+            photoMW = [[MWPhoto alloc] initWithURL:[NSURL URLWithString:photo.urlString_photo_604]];
+        } else {
+            photoMW = [[MWPhoto alloc] initWithURL:[NSURL URLWithString:photo.urlString_photo_1280]]; }
         photoMW.caption = photo.text;
         [photoArrayMWFormat addObject:photoMW];
     }
@@ -389,8 +406,6 @@ static NSInteger postTextLabelWidth = 335;
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView == self.tableView) {
-        if (scrollView.contentOffset.y > 2000 && self.navigationController.toolbar.hidden) {
-            [self.navigationController setToolbarHidden:NO];  }
         if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
             if (!loadingData) {
                 loadingData = YES;
@@ -409,12 +424,6 @@ static NSInteger postTextLabelWidth = 335;
     [self.navigationController popToRootViewControllerAnimated:YES];
 
     [navC refreshWallAuto];
-}
-
-
-- (IBAction)jumpToTopOfPageAction:(UIBarButtonItem *)sender {
-    [self.navigationController setToolbarHidden:YES];
-    [self.tableView setContentOffset:CGPointMake(0, -self.tableView.contentInset.top) animated:YES];
 }
 
 
@@ -456,7 +465,7 @@ static NSInteger postTextLabelWidth = 335;
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+  
     VSCollectionViewCell *albumCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell"                                                           forIndexPath:indexPath];
     
     VSPhoto *photo = photoArray[indexPath.row];

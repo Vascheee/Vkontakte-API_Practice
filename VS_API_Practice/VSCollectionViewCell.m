@@ -27,12 +27,9 @@
         proportion = 1;
     }
     
-    return CGSizeMake(335, 335 *proportion);
+    return CGSizeMake(335, (NSInteger)(335 *proportion));
 }
 
--(void)prepareForReuse {
-    [super prepareForReuse];
-    //self.albumCoverCell.image = nil;
-}
+
 
 @end

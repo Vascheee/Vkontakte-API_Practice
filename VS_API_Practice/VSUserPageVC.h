@@ -15,6 +15,6 @@
 @property (strong, nonatomic) NSString *userID;
 
 - (IBAction)goToHomePageAction:(UIBarButtonItem *)sender;
-- (IBAction)jumpToTopOfPageAction:(UIBarButtonItem *)sender;
+//- (IBAction)jumpToTopOfPageAction:(UIBarButtonItem *)sender;
 
 @end

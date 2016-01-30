@@ -45,7 +45,6 @@ UIGestureRecognizerDelegate, UICollectionViewDataSource, UICollectionViewDelegat
 static NSInteger postCount = 20;
 static NSInteger photoLimitCount = 20;
 static NSInteger postTextLabelWidth = 335;
-static NSInteger postImagelWidth = 350;
 
 
 
@@ -57,8 +56,7 @@ static NSInteger postImagelWidth = 350;
     
     self.tableView.frame = CGRectMake(0, 65, CGRectGetWidth(self.view.bounds),
                                       CGRectGetHeight(self.view.bounds)-65);
-    
-    self.navigationController.navigationBar.backgroundColor =
+/*    self.navigationController.navigationBar.backgroundColor =
     [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0];
     [self.navigationController setToolbarHidden:YES];
     toolBar = self.navigationController.toolbar;
@@ -73,9 +71,8 @@ static NSInteger postImagelWidth = 350;
     UIImage *transparentImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     [toolBar setBackgroundImage:transparentImage
-             forToolbarPosition:UIBarPositionBottom barMetrics:UIBarMetricsDefault];
+             forToolbarPosition:UIBarPositionBottom barMetrics:UIBarMetricsDefault]; */
 
-    
     photoAlbumsArray = [NSMutableArray new];
     photoArray = [NSMutableArray new];
     photoArrayMWFormat = [NSMutableArray new];
@@ -134,6 +131,7 @@ static NSInteger postImagelWidth = 350;
                                            withOffset:photoArray.count
                                             onSuccess:^(NSArray *albumsArray) {
                                                 [photoArray addObjectsFromArray:albumsArray];
+                                                [self prepareMWPhotoArray];
                                                 [self.tableView reloadData];
                                             } onFailure:^(NSError *error, NSInteger statusCode) {
                                                 NSLog(@"Error - %@. StatusCode -%ld",
@@ -230,7 +228,7 @@ static NSInteger postImagelWidth = 350;
             VSPost *post = postArray[indexPath.row-3];
             VSPostCell *cell = [tableView dequeueReusableCellWithIdentifier:post.postType];
             [cell configureWithPost:post];
-            if (!post.postType) { NSLog(@"PostType = nil. Post - %d", indexPath.row-4); }
+            if (!post.postType) { NSLog(@"PostType = nil. Post - %ld", indexPath.row-4); }
             
             return cell;
     }
@@ -251,27 +249,24 @@ static NSInteger postImagelWidth = 350;
     }        
     VSPost *post = postArray[indexPath.row - 3];
     CGFloat heightPost;
-    CGFloat heightImage = 0.0;
+    CGFloat heightPhoto;
     
     if ([post.postType isEqualToString:@"post_OnlyText"]) {
-        return heightPost = [VSPostCell heightForCellByText:post.text forWidth:postTextLabelWidth] +110;
+        heightPost = [VSPostCell heightForCellByText:post.text forWidth:postTextLabelWidth] +110;
+        if (post.videoImageURL) {
+            return  heightPost +280;
+        }
+        return heightPost;
     }
     if ([post.postType isEqualToString:@"post_OnlyPhoto"]) {
-        CGFloat heightAllPhotos = 0.0;
-        for (VSPhoto *photo in post.photoArrayInPost) {
-            CGFloat proportion = (float)photo.height / (float)photo.width;
-            heightImage = postImagelWidth *proportion;
-            heightAllPhotos = heightAllPhotos + heightImage; }
-        return heightAllPhotos +90;
+        return [VSPostCell heightForCellByPhotoArray:post.photoArrayInPost
+                                            forWidth:[tableView bounds].size.width];
     }
     if ([post.postType isEqualToString:@"post_PhotoAndText"]) {
         heightPost = [VSPostCell heightForCellByText:post.text forWidth:postTextLabelWidth];
-        CGFloat heightAllPhotos = 0.0;
-        for (VSPhoto *photo in post.photoArrayInPost) {
-            CGFloat proportion = (float)photo.height / (float)photo.width;
-            heightImage = postImagelWidth *proportion;
-            heightAllPhotos = heightAllPhotos + heightImage; }
-        return heightAllPhotos +heightPost +110;
+        heightPhoto =  [VSPostCell heightForCellByPhotoArray:post.photoArrayInPost forWidth:[tableView bounds].size.width];
+        NSInteger heightAll = heightPost + heightPhoto +50;
+        return heightAll;
     }
     return 44;
 }
@@ -304,14 +299,26 @@ static NSInteger postImagelWidth = 350;
 }
 
 
+- (void)prepareMWPhotoArray {
+    MWPhoto *photoMW;
+    for (VSPhoto *photo in photoArray) {
+        if (!photo.urlString_photo_1280) {
+            photoMW = [[MWPhoto alloc] initWithURL:[NSURL URLWithString:photo.urlString_photo_604]];
+        } else {
+            photoMW = [[MWPhoto alloc] initWithURL:[NSURL URLWithString:photo.urlString_photo_1280]]; }
+        photoMW.caption = photo.text;
+        [photoArrayMWFormat addObject:photoMW];
+    }
+}
+
 #pragma mark - Actions
 /*=================================================================================================*/
 
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView == self.tableView) {
-        if (scrollView.contentOffset.y > 2000 && self.navigationController.toolbar.hidden) {
-            [self.navigationController setToolbarHidden:NO];  }
+//        if (scrollView.contentOffset.y > 2000 && self.navigationController.toolbar.hidden) {
+//            [self.navigationController setToolbarHidden:NO];  }
     }
     if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
         if (!loadingData) {
@@ -330,8 +337,8 @@ static NSInteger postImagelWidth = 350;
 
 
 - (IBAction)jumpToTopOfPageAction:(UIBarButtonItem *)sender {
-    [self.tableView setContentOffset:CGPointMake(0, -self.tableView.contentInset.top) animated:YES];
-    [self.navigationController setToolbarHidden:YES];
+//    [self.navigationController setToolbarHidden:YES];
+//    [self.tableView setContentOffset:CGPointMake(0, -self.tableView.contentInset.top) animated:YES];
 }
 
 
@@ -360,13 +367,13 @@ static NSInteger postImagelWidth = 350;
 /*=================================================================================================*/
 
 
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return photoArray.count;
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+
     
     VSCollectionViewCell *albumCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell"                                                           forIndexPath:indexPath];
     

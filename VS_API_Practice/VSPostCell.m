@@ -10,7 +10,6 @@
 #import "VSGroup.h"
 #import "VSPost.h"
 #import "VSPhoto.h"
-#import "VSVideo.h"
 #import "VSPostCell.h"
 #import "MWPhotoBrowser.h"
 #import "VSCollectionViewCell.h"
@@ -18,19 +17,13 @@
 
 
 @interface VSPostCell () < UICollectionViewDataSource, UICollectionViewDelegate>
+
 @end
 
 @implementation VSPostCell
 
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-         [self.collectionView registerClass:[VSCollectionViewCell class] forCellWithReuseIdentifier:@"collectionCell"];
-    }
-    return self;
-}
+
 
 
 + (CGFloat)heightForCellByText:(NSString*)text forWidth:(NSInteger)width {
@@ -58,16 +51,18 @@
 
 + (CGFloat)heightForCellByPhotoArray:(NSArray*)array forWidth:(NSInteger)width {
     CGFloat heightImage = 0.0;
-    CGFloat heightAllPhotos = 0.0;
-    for (VSPhoto *photo in array) {
-        if ([photo isKindOfClass:[VSVideo class]]) {
-            return 300;
-        }
+    CGFloat height = 0.0;
+    if (array.count > 1) {
+        for (VSPhoto *photo in array) {
         CGFloat proportion = (float)photo.height / (float)photo.width;
         heightImage = width *proportion;
-        heightAllPhotos = heightAllPhotos + heightImage; }
-    return heightAllPhotos +60;
-
+        height = height + (NSInteger)heightImage; }
+        } else {
+            VSPhoto *photo = [array firstObject];
+            CGFloat proportion = (float)photo.height / (float)photo.width;
+            height = width *proportion;
+        }
+    return height;
 }
 
 
@@ -83,11 +78,16 @@
     self.repostOwnerImage.layer.borderWidth  = 1.f;
     self.repostOwnerImage.layer.borderColor  =
     [UIColor colorWithRed:0.5842 green:0.5814 blue:0.5899 alpha:1.0].CGColor;
+
 }
 
 
+
 - (void)configureWithPost:(VSPost*)post {
-    
+    self.videoImView.hidden = YES;
+    self.videoNameLabel.hidden = YES;
+    self.videoInfoLabel.hidden = YES;
+
     if (post.photoArrayInPost.count > 0) {
         self.arrayPhotosInPost = post.photoArrayInPost;
         [self.collectionView reloadData];
@@ -120,7 +120,13 @@
         self.ownerNameLabel.text     = [NSString stringWithFormat:@"%@",
                                         post.fromGroup.nameGroup];
         [self assineImageToImageView:self.avatarImage byString:post.fromGroup.smallPhotoStringUrl];
-
+    }
+    if (post.videoImageURL) {
+        self.videoInfoLabel.hidden = NO;
+        self.videoImView.hidden = NO;
+        self.videoNameLabel.hidden = NO;
+        self.videoNameLabel.text = post.videofileName;
+        [self assineImageToImageView:self.videoImView byString:post.videoImageURL];
     }
 }
 
@@ -160,11 +166,7 @@
     VSCollectionViewCell *albumCell = (VSCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell"                                                           forIndexPath:indexPath];
     
     VSPhoto *photo = self.arrayPhotosInPost[indexPath.row];
-    if ([photo isKindOfClass:[VSVideo class]]) {
-        VSVideo *video = self.arrayPhotosInPost[indexPath.row];
-        [self assineImageToImageView:albumCell.albumCoverCell byString:video.titleImageURL];
-    } else {
-        [self assineImageToImageView:albumCell.albumCoverCell byString:photo.urlString_photo_604]; }
+    [self assineImageToImageView:albumCell.albumCoverCell byString:photo.urlString_photo_604];
     return albumCell;
 }
 
@@ -179,9 +181,7 @@
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     VSPhoto *photo = self.arrayPhotosInPost[indexPath.row];
-    if ([photo isKindOfClass:[VSVideo class]]) {
-        return CGSizeMake(300, 200);
-    }
+  
     CGSize size = [VSCollectionViewCell photoCellSizeForWallByPhotoWidth:photo.width andPhotoHeight:photo.height];
     return size;
 }

@@ -54,5 +54,9 @@
     return self;
 }
 
+-(NSString *)description {
+    return [NSString stringWithFormat:@"width -%ld, height - %ld, URL - %@",
+            (long)self.width, (long)self.height, self.urlString_photo_1280];
+}
 
 @end
